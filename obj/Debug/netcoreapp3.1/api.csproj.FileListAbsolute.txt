@@ -1,0 +1,6 @@
+C:\Users\Andre\Desktop\Work\Saipher\Projeto\fp\api\bin\Debug\netcoreapp3.1\api.dll
+C:\Users\Andre\Desktop\Work\Saipher\Projeto\fp\api\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Andre\Desktop\Work\Saipher\Projeto\fp\api\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+C:\Users\Andre\Desktop\Work\Saipher\Projeto\fp\api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\Andre\Desktop\Work\Saipher\Projeto\fp\api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Andre\Desktop\Work\Saipher\Projeto\fp\api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.InMemory.dll
