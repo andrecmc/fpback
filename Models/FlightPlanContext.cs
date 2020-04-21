@@ -9,6 +9,6 @@ namespace FPApi.Models
         {
         }
 
-        public DbSet<FlightPlan> TodoItems { get; set; }
+        public DbSet<FlightPlan> FlightPlanItems { get; set; }
     }
 }

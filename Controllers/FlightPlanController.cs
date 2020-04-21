@@ -24,9 +24,10 @@ namespace api.Controllers
 
         // GET: api/FlightPlan
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<FlightPlan>>> GetTodoItems()
+        public async Task<ActionResult<IEnumerable<FlightPlan>>> GetFlightPlanList()
         {
-            return await _context.TodoItems.ToListAsync();
+            //return await _context.FlightPlanItems.ToListAsync();
+            return await _context.FlightPlanItems.OrderBy(x => x.Id).ToListAsync();
         }
 
         // GET api/FlightPlan/info
@@ -42,7 +43,7 @@ namespace api.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<FlightPlan>> GetFlightPlan(long id)
         {
-            var flightPlan = await _context.TodoItems.FindAsync(id);
+            var flightPlan = await _context.FlightPlanItems.FindAsync(id);
 
             if (flightPlan == null)
             {
@@ -90,7 +91,7 @@ namespace api.Controllers
         [HttpPost]
         public async Task<ActionResult<FlightPlan>> PostFlightPlan(FlightPlan flightPlan)
         {
-            _context.TodoItems.Add(flightPlan);
+            _context.FlightPlanItems.Add(flightPlan);
             await _context.SaveChangesAsync();
             // return CreatedAtAction("GetFlightPlan", new { id = flightPlan.Id }, flightPlan);
             return CreatedAtAction(nameof(GetFlightPlan), new { id = flightPlan.Id }, flightPlan);
@@ -100,13 +101,13 @@ namespace api.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<FlightPlan>> DeleteFlightPlan(long id)
         {
-            var flightPlan = await _context.TodoItems.FindAsync(id);
+            var flightPlan = await _context.FlightPlanItems.FindAsync(id);
             if (flightPlan == null)
             {
                 return NotFound();
             }
 
-            _context.TodoItems.Remove(flightPlan);
+            _context.FlightPlanItems.Remove(flightPlan);
             await _context.SaveChangesAsync();
 
             return flightPlan;
@@ -114,7 +115,7 @@ namespace api.Controllers
 
         private bool FlightPlanExists(long id)
         {
-            return _context.TodoItems.Any(e => e.Id == id);
+            return _context.FlightPlanItems.Any(e => e.Id == id);
         }
     }
 }
